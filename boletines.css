@@ -1,0 +1,262 @@
+body{
+    background-color: black !important;
+}
+
+
+.navbar {
+    background-color: #222 !important; /* Color de fondo */
+    padding: 20px 25px; /* Aumenta el espacio dentro de la barra */
+    font-size: 1.3rem; /* Hace que los textos sean más grandes */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 80px;  /* Aumenta el tamaño del logo */
+    height: auto;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px; /* Aumenta el área de clic de los enlaces */
+    color: bisque !important;
+}
+
+/* Estilo para los submenús */
+.navbar-nav .nav-item .dropdown-menu {
+    background-color: black !important; /* Fondo negro */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: bisque;
+    width: auto; /* Ajusta el ancho del submenú */
+    min-width: 200px; /* Asegura que los submenús tengan un tamaño mínimo */
+    position: absolute; /* Asegura que el submenú no se desborde */
+    right: 0; /* Posiciona el submenú a la derecha */
+    left: auto; /* Previene que se mueva a la izquierda */
+}
+
+.navbar-nav .nav-item .dropdown-item {
+    padding: 10px 15px;
+    color: bisque !important;
+    background-color: black !important;
+}
+
+.navbar-nav .nav-item .dropdown-item:hover {
+    background-color: #a47551 !important;
+    color: white !important;
+}
+
+.navbar-nav .nav-item .dropdown-toggle::after {
+    color: bisque; /* Cambia el color del icono del desplegable */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+
+    /* Asegura que el submenú se alinee correctamente en pantallas pequeñas */
+    .navbar-nav .nav-item .dropdown-menu {
+        position: static; /* Cambia a estático para dispositivos pequeños */
+        margin-top: 10px; /* Añade espacio superior */
+    }
+}
+
+/* Estilos para la sección de boletines informativos y noticias */
+.boletines-noticias {
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: black;
+    margin-top: 0%;
+}
+
+.titulo {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 60px;
+}
+
+
+
+.descripcion {
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.imagen-item {
+    width: 30%;
+    text-align: center;
+}
+
+.imagen-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.subtitulo {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+.fecha {
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 0;
+    
+}
+
+/* Logo */
+.footer-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contacto */
+.footer-contact {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Redes sociales */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.social-icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Enlaces útiles */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-links h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .footer-logo {
+        width: 150px;
+    }
+
+    .footer-contact {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        padding: 0 20px;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 130px;
+    }
+
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-links {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .footer-contact {
+        font-size: 0.8rem;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}

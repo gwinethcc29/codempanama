@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Curso</title>
+    <script src="coments.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js"></script>
+  <script src="firebase.js"></script>
+    <style>
+        /* Estilos básicos y estructura */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Barra superior */
+        .top-bar {
+            background-color: #f1f1f1;
+            height: 50px;
+        }
+
+        .purple-light, .purple-dark {
+            height: 30px;
+        }
+
+        .purple-light {
+            background-color: #d1a1f5;
+        }
+
+        .purple-dark {
+            background-color: #6a2c91;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        /* Estilo para el botón para cambiar entre administrador y estudiante */
+        #roleButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        #roleButton:hover {
+            background-color: #45a049;
+        }
+
+        /* Modal de contraseña de administrador */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Card de información del curso */
+        .course-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 700px;
+        }
+
+        .course-card h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .course-card .course-info {
+            font-weight: bold;
+        }
+
+        /* Estilo para las carpetas de contenido */
+        .folder {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .folder h3 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .folderContent {
+            margin-top: 10px;
+        }
+
+        /* Estilo para los formularios */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"],
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover,
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo de la sección de comentarios */
+        #commentsSection {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+
+        #commentBox {
+            resize: vertical;
+            height: 100px;
+        }
+
+        #commentsList p {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+    <div class="purple-light"></div>
+    <div class="purple-dark">
+        <p>Información del curso</p>
+    </div>
+
+    <div class="course-card">
+        <h2>Curso de Introducción a la Programación</h2>
+        <p class="course-info">Instructor: Juan Pérez</p>
+        <p class="course-info">Duración: 6 semanas</p>
+        <p class="course-info">Nivel: Básico</p>
+        <p>Este curso tiene como objetivo introducir a los estudiantes en el mundo de la programación, proporcionando una comprensión básica de los lenguajes más comunes y las herramientas de desarrollo. Se cubrirán conceptos fundamentales como variables, estructuras de control, y desarrollo de proyectos sencillos.</p>
+    </div>
+
+    <div class="role-toggle">
+        <button id="roleButton" onclick="toggleRole()">Estudiante</button>
+    </div>
+
+    <div id="adminOptions" style="display: none;">
+        <button onclick="showAddContentForm()">Añadir Contenido</button>
+        <button onclick="addSection()">Añadir Sección</button>
+    </div>
+
+    <div id="adminPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <label for="adminPassword">Introduce la contraseña de administrador:</label>
+            <input type="password" id="adminPassword">
+            <button onclick="validatePassword()">Acceder</button>
+        </div>
+    </div>
+
+    <div id="formOverlay" style="display: none;"></div>
+    <div id="addContentForm" style="display: none;">
+        <form>
+            <label for="contentType">Tipo de contenido:</label>
+            <select id="contentType">
+                <option value="image">Imagen</option>
+                <option value="video">Video</option>
+                <option value="document">Documento</option>
+                <option value="googleForm">Formulario de Google</option>
+            </select>
+
+            <label for="contentFile">Seleccionar archivo:</label>
+            <input type="file" id="contentFile">
+
+            <label for="googleFormUrl">URL del Formulario de Google:</label>
+            <input type="text" id="googleFormUrl" placeholder="Ingresa la URL del formulario de Google">
+
+            <label for="classSelect">Asignar a clase:</label>
+            <select id="classSelect"></select>
+
+            <button type="submit">Agregar Contenido</button>
+            <button type="button" onclick="closeAddContentForm()">Cerrar</button>
+        </form>
+    </div>
+
+    <div id="contentFolders"></div>
+
+    <div id="commentsSection">
+        <h3>Comentarios</h3>
+        <textarea id="commentBox" placeholder="Deja tu comentario aquí..."></textarea>
+        <button onclick="submitComment()">Enviar</button>
+        
+        <div id="commentsList"></div>
+    </div>
+
+    <script>
+        let isAdmin = false;
+
+        localStorage.setItem('isAdmin', 'true'); // Cambiar según el estado del usuario (por ejemplo, 'true' o 'false')
+        isAdmin = localStorage.getItem('isAdmin') === 'true';
+
+        function toggleRole() {
+            isAdmin = !isAdmin;
+            document.getElementById('roleButton').innerText = isAdmin ? "Administrador" : "Estudiante";
+            if (isAdmin) {
+                document.getElementById('adminPasswordModal').style.display = 'block';
+            } else {
+                document.getElementById('adminOptions').style.display = 'none';
+            }
+        }
+
+        function showAddContentForm() {
+            if (isAdmin) {
+                document.getElementById("formOverlay").style.display = "block";
+                document.getElementById("addContentForm").style.display = "block";
+            }
+        }
+
+        function closeAddContentForm() {
+            document.getElementById("formOverlay").style.display = "none";
+            document.getElementById("addContentForm").style.display = "none";
+        }
+
+        function closeModal() {
+            document.getElementById('adminPasswordModal').style.display = 'none';
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('adminPassword').value;
+            if (password === 'admin123') {
+                document.getElementById('adminOptions').style.display = 'block';
+                closeModal();
+            } else {
+                alert('Contraseña incorrecta');
+            }
+        }
+
+        function submitComment() {
+            const comment = document.getElementById('commentBox').value;
+            const commentsList = document.getElementById('commentsList');
+            const newComment = document.createElement('p');
+            newComment.textContent = comment;
+            commentsList.appendChild(newComment);
+            document.getElementById('commentBox').value = '';
+        }
+
+        function addSection() {
+            const className = prompt("Ingrese el nombre de la nueva clase:");
+            if (className) {
+                const contentFolders = document.getElementById('contentFolders');
+                const newSection = document.createElement('div');
+                newSection.classList.add('folder');
+                newSection.innerHTML = `<h3>${className}</h3>`;
+                contentFolders.appendChild(newSection);
+            }
+        }
+    </script>
+</body>
+</html>

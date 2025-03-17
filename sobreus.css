@@ -1,0 +1,391 @@
+.navbar {
+    background-color: #222 !important; /* Color de fondo */
+    padding: 20px 25px; /* Aumenta el espacio dentro de la barra */
+    font-size: 1.3rem; /* Hace que los textos sean más grandes */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 80px;  /* Aumenta el tamaño del logo */
+    height: auto;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px; /* Aumenta el área de clic de los enlaces */
+    color: bisque !important;
+}
+
+/* Estilo para los submenús */
+.navbar-nav .nav-item .dropdown-menu {
+    background-color: black !important; /* Fondo negro */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: bisque;
+    width: auto; /* Ajusta el ancho del submenú */
+    min-width: 200px; /* Asegura que los submenús tengan un tamaño mínimo */
+    position: absolute; /* Asegura que el submenú no se desborde */
+    right: 0; /* Posiciona el submenú a la derecha */
+    left: auto; /* Previene que se mueva a la izquierda */
+}
+
+.navbar-nav .nav-item .dropdown-item {
+    padding: 10px 15px;
+    color: bisque !important;
+    background-color: black !important;
+}
+
+.navbar-nav .nav-item .dropdown-item:hover {
+    background-color: #a47551 !important;
+    color: white !important;
+}
+
+.navbar-nav .nav-item .dropdown-toggle::after {
+    color: bisque; /* Cambia el color del icono del desplegable */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+
+    /* Asegura que el submenú se alinee correctamente en pantallas pequeñas */
+    .navbar-nav .nav-item .dropdown-menu {
+        position: static; /* Cambia a estático para dispositivos pequeños */
+        margin-top: 10px; /* Añade espacio superior */
+    }
+}
+
+.imagendefondo{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contenedor {
+    width: 100%;
+    background-color: black;
+    height: 630px;
+}
+
+.principal{
+   
+   
+    padding-top: 200px;
+    margin-left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.3em;
+    font-weight: bold;
+    color: white !important;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+
+p{
+    font-size: 1.3rem;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
+}
+
+.principalfoto{
+    width: auto;
+    height: auto;
+    margin-left: 30px;
+}
+
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye las tarjetas */
+    gap: 10px; /* Espacio más pequeño entre las tarjetas */
+    margin-top: 100px; /* Márgenes para separar del resto del contenido */
+    padding: 0 20px; /* Pequeño padding lateral */
+   
+  }
+  
+  .card {
+    width: 100%; /* Ocupar todo el espacio disponible */
+    max-width: 28rem; /* Limita el ancho máximo de las tarjetas */
+   
+    border-radius: 8px; /* Esquinas redondeadas */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 0; /* Elimina márgenes innecesarios */
+  }
+  
+  .card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantiene las proporciones de la imagen */
+  }
+  
+  .card-body {
+    padding: 5px 5px; /* Ajustamos el padding para que no esté tan separado */
+    background-color: #f8f9fa; /* Fondo suave para el contenido */
+  }
+  
+  .card-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.0rem; /* Ajustamos el tamaño del título */
+    font-weight: bold;
+    margin-bottom: 1px; /* Reducimos el margen entre título y descripción */
+  }
+  
+  .card-text {
+    font-size: 1.3rem;
+    color: gray; /* Texto gris oscuro para mejor legibilidad */
+    line-height: 1.5; /* Espaciado de línea para mejor legibilidad */ 
+  }
+
+  .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación suave */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Aumenta un 5% el tamaño */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  }
+  
+  
+.elquesigue{
+    font-size: 3em !important;
+    align-items: center !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold !important;
+    margin-left: 30% !important;
+    color: black;
+    margin-top: 50px;
+  }
+
+
+  
+
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1100px; /* Reduce el ancho máximo para que no se salga de pantalla */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 220px; /* Más estrecho para evitar desbordes */
+    height: 320px; /* Ahora sí es más largo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 🔹 Fondo con imagen para los demás */
+.team-member {
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%; /* Imágenes redondas */
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 0.9rem;
+    color: #555;
+    max-width: 90%;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* 🔹 Diseño adaptable para pantallas pequeñas */
+@media (max-width: 1200px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en celulares */
+    }
+}
+
+.equipo{
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center !important;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    margin-left: 550px ;
+}
+
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 0;
+    margin-top: 100px;
+    
+}
+
+/* Logo */
+.footer-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contacto */
+.footer-contact {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Redes sociales */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.social-icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Enlaces útiles */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-links h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .footer-logo {
+        width: 150px;
+    }
+
+    .footer-contact {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        padding: 0 20px;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 130px;
+    }
+
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-links {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .footer-contact {
+        font-size: 0.8rem;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}

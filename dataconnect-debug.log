@@ -1,0 +1,10 @@
+I0316 17:00:15.115906  104436 load.go:37] Reloading schema and connectors...
+I0316 17:00:15.186805  104436 control.go:59] [/emulator/codemsito fb06] UpdateResources(): done
+Schema: sources: schema\schema.gql [2088B] 
+Connector "default": sources: connector\mutations.gql [1233B] connector\queries.gql [1802B] 
+I0316 17:00:15.211650  104436 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "C:\\Users\\globo\\OneDrive\\Escritorio\\CODEMSITO\\dataconnect-generated\\js\\default-connector"
+I0316 17:00:15.222704  104436 collector.go:107] schema extensions wrote into "C:\\Users\\globo\\OneDrive\\Escritorio\\CODEMSITO\\dataconnect\\.dataconnect\\schema"
+Generated sources: prelude.gql [67020B] 
+I0316 17:00:15.243648  104436 collector.go:107] connector "default" javascriptSdk wrote into "C:\\Users\\globo\\OneDrive\\Escritorio\\CODEMSITO\\dataconnect-generated\\js\\default-connector"
+Generated sources: index.cjs.js [148B] react\package.json [468B] react\index.cjs.js [0B] react\esm\index.esm.js [0B] esm\index.esm.js [112B] esm\package.json [17B] package.json [895B] README.md [2800B] react\index.d.ts [228B] react\esm\package.json [17B] react\README.md [5443B] index.d.ts [246B] 
+I0316 17:00:15.279552  104436 installsdk.go:76] Running command: C:\Program Files\nodejs\npm.cmd install file:dataconnect-generated\js\default-connector

@@ -1,0 +1,570 @@
+.navbar {
+    background-color: #222 !important; /* Color de fondo */
+    padding: 20px 25px; /* Aumenta el espacio dentro de la barra */
+    font-size: 1.3rem; /* Hace que los textos sean más grandes */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 80px;  /* Aumenta el tamaño del logo */
+    height: auto;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px; /* Aumenta el área de clic de los enlaces */
+    color: bisque !important;
+}
+
+/* Estilo para los submenús */
+.navbar-nav .nav-item .dropdown-menu {
+    background-color: black !important; /* Fondo negro */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: bisque;
+    width: auto; /* Ajusta el ancho del submenú */
+    min-width: 200px; /* Asegura que los submenús tengan un tamaño mínimo */
+    position: absolute; /* Asegura que el submenú no se desborde */
+    right: 0; /* Posiciona el submenú a la derecha */
+    left: auto; /* Previene que se mueva a la izquierda */
+}
+
+.navbar-nav .nav-item .dropdown-item {
+    padding: 10px 15px;
+    color: bisque !important;
+    background-color: black !important;
+}
+
+.navbar-nav .nav-item .dropdown-item:hover {
+    background-color: #a47551 !important;
+    color: white !important;
+}
+
+.navbar-nav .nav-item .dropdown-toggle::after {
+    color: bisque; /* Cambia el color del icono del desplegable */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+
+    /* Asegura que el submenú se alinee correctamente en pantallas pequeñas */
+    .navbar-nav .nav-item .dropdown-menu {
+        position: static; /* Cambia a estático para dispositivos pequeños */
+        margin-top: 10px; /* Añade espacio superior */
+    }
+}
+
+
+/* Contenedor de la imagen y el texto */
+.contenedor {
+    position: relative;
+    width: 600px;  /* Ajusta según tu necesidad */
+}
+
+/* Imagen */
+.contenedor img {
+    width: 1519px;
+    height: 400px;
+    
+    
+}
+
+/* Texto sobre la imagen */
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 200%;
+    margin-left: 75%;
+  
+    
+}
+
+/* Estilos del h1 */
+.texto h1 {
+    font-size: 27px;
+    margin: 0;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+/* Estilos del párrafo */
+.texto p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Botón */
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color:rgba(255, 210, 155, 0.819); /* Color del botón */
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 30px;
+}
+
+/* Efecto hover */
+.boton:hover {
+    background-color:#a47551;
+}
+
+/* Estilo general del carrusel */
+.carousel-item {
+    height: 70vh; /* Hace que cada slide ocupe toda la altura de la ventana */
+    background-color: black;
+  }
+  
+  /* Asegura que las imágenes ocupen el 100% de su contenedor y se ajusten a la mitad de la pantalla */
+  .carousel-item img {
+    object-fit: cover;
+    height: 80%; /* La imagen ocupa toda la altura del contenedor */
+    margin-left: 70px;
+    margin-top: 20px;
+    max-width: 500px; /* Ajusta el tamaño máximo para que se vea cuadrada */
+    max-height: 500px; /* Limita la altura para que no sea muy grande */
+  }
+  
+  /* Estilo para el texto dentro del carrusel */
+  .carousel-caption {
+    font-family: Arial, Helvetica, sans-serif;
+    position: static; /* Evita que se salga del flujo normal */
+    transform: none; /* Quita el desplazamiento manual */
+    color: #fff; /* Mantiene el color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 600px; /* Ajusta el ancho máximo del texto */
+    padding: 20px; /* Agrega espacio alrededor */
+    margin-left: 600px;
+    margin-bottom: 100px;
+  }
+  
+
+  
+  /* Estilo para el contenedor de la imagen y el texto */
+  .carousel-item .row {
+    height: 100%; /* Hace que el contenedor de la imagen y el texto ocupe el 100% de la altura del slide */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente */
+  
+  }
+  
+
+ .carousel-item .col-md-6 {
+    width: 100%; /* Permite que use todo el espacio disponible */
+    padding: 20px; /* Espaciado alrededor del texto */
+    max-width: 600px; /* Ajusta el ancho máximo */
+ 
+}
+
+
+.si{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color:rgba(255, 210, 155, 0.819); /* Color del botón */
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 30px;
+}
+  
+.si:hover {
+    background-color: #a47551;
+}
+
+.full-width-section {
+    width: 100%;
+    text-align: center; /* Centra el contenido */
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajusta la altura */
+    overflow: hidden; /* Evita que el contenido salga del área */
+  }
+  
+  .image-container img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 100%; /* Ajusta la altura */
+    object-fit: cover; /* Recorta la imagen si es necesario */
+    display: block;
+  }
+  
+  .text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+  }
+  
+  .text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 50px;  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Efecto hover */
+.btn:hover {
+    background-color:#a47551;
+}
+  
+  
+  .btn-primary {
+    background-color:rgba(255, 210, 155, 0.819) !important; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none !important; /* Elimina el borde */
+    outline: none !important; /* Evita el borde al hacer clic */
+  }
+  
+  .btn-secondary {
+    background-color: rgba(255, 210, 155, 0.819) !important; /* Color gris */
+    color: white;
+    border: none !important;
+    outline: none !important;
+  }
+  
+  /* Para evitar que al hacer clic aparezca un borde */
+  .btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+/* Estilo exclusivo para esta sección */
+.content-section {
+    background-color: black;
+    color: white;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* Título y descripción */
+.content-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Diseño de cada fila */
+.content-section .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Alternar orden en la segunda fila (solo con clase 'reverse') */
+.content-section .row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Columnas de imagen y texto */
+.content-section .col-md-6 {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center; /* Centra las imágenes y el texto dentro de la columna */
+}
+
+/* Imágenes con tamaño adecuado */
+.content-section .image-container img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Texto alineado correctamente */
+.content-section .text-container {
+    display: flex;
+    flex-direction: column;  /* Pone el título sobre el texto */
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+    text-align: left;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* RESPONSIVE: en móviles, la imagen va arriba del texto */
+@media (max-width: 768px) {
+    .content-section .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-section .col-md-6 {
+        max-width: 90%;
+    }
+
+    .content-section .text-container {
+        text-align: center;
+    }
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 0;
+    
+}
+
+/* Logo */
+.footer-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contacto */
+.footer-contact {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Redes sociales */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.social-icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Enlaces útiles */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-links h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .footer-logo {
+        width: 150px;
+    }
+
+    .footer-contact {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        padding: 0 20px;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 130px;
+    }
+
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-links {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .footer-contact {
+        font-size: 0.8rem;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Estilo para la mascota en la esquina */
+.mascota {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer; /* Hace que sea clickeable */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo de la imagen de la mascota */
+.mascota-imagen {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #0b7588; /* Borde verde para que resalte */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out; /* Efecto al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse sobre Codito */
+.mascota:hover .mascota-imagen {
+    transform: scale(1.1); /* Hace que Codito se haga un poco más grande */
+}
+
+/* Estilo del globo de texto */
+.mensaje {
+    background-color: #0b7588; /* Verde de bienvenida */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    max-width: 250px;
+    margin-left: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transform: translateY(10px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    font-family: 'Arial', sans-serif; /* Fuentes más legibles */
+    text-align: center; /* Centrar texto */
+}
+
+/* Efecto de aparición del mensaje */
+.mensaje.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: entradaMensaje 1s ease-in-out;
+}
+
+/* Definir los valores iniciales de la animación para desaparecer */
+.mensaje {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes entradaMensaje {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEM</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="register.html">
+    <link rel="stylesheet" href="perfil.html">
+    <!-- AOS CSS for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- JS de Bootstrap (requiere Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- Espacio para el logo -->
+        <a class="navbar-brand" href="#"></a>
+        <img src="Captura de pantalla 2025-02-28 133102.png" alt="Logo de la empresa" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+
+                <!-- Boletines con submenú de Noticias y más -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Boletines
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="boletines.html">Boletines informativos</a></li>
+                        <li><a class="dropdown-item" href="notic.html">Noticias</a></li> <!-- Nuevo elemento en Boletines -->
+                    </ul>
+                </li>
+
+                <!-- Cursos con submenú de Retos, Cómics y más -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCursos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cursos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCursos">
+                        <li><a class="dropdown-item" href="editorcursos.html">Cursos</a></li>
+                        <li><a class="dropdown-item" href="#">Cómics</a></li>
+                        <li><a class="dropdown-item" href="#">Retos</a></li> <!-- Nuevo elemento en Cursos -->
+                    </ul>
+                </li>
+
+                <a class="nav-link" href="podcasts.html">Podcasts</a>
+                <a class="nav-link" href="sobreus.html">Nosotros</a>
+                
+                <!-- Perfil con submenú de Cerrar sesión y más -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPerfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Perfil
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownPerfil">
+                        <li><a class="dropdown-item" href="perfil.html">Ver Perfil</a></li>
+                        <li><a class="dropdown-item" id="logoutButton">Cerrar sesión</a></li> <!-- Cerrar sesión debajo de Perfil -->
+                       
+                        <script>document.getElementById('logoutButton').addEventListener('click', () => {
+                          localStorage.removeItem('token'); // Borra el token de sesión
+                          localStorage.removeItem('role'); // Borra el rol guardado
+                          alert('Has cerrado sesión'); // Muestra un mensaje de confirmación
+                      });
+                    </script>
+                      
+                    </ul>
+                </li>
+            </div>
+        </div>
+    </div>
+
+
+   
+</nav>
+  
+  <div class="contenedor" data-aos="fade-up">
+    <img src="1000090099.jpg" alt="Imagen de ejemplo">
+    <div class="texto">
+        <p> En CODEM, transformamos la educación cívica y empoderamos a los jóvenes para que participen activamente en la democracia. 
+            <br>¡Tú tienes el poder de cambiar el futuro, aprende cómo participar!</p>
+        <h1>Bienvenido a CODEM</h1>
+        <a href="#" class="boton">Contáctanos</a>
+    </div>
+  </div>
+    
+  <!-- Carrusel con animaciones -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="angyyyysalomon.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>El conocimiento es poder</h2>
+              <p class="nose">La educación es la base para una participación cívica efectiva. En CODEM, ofrecemos una variedad de cursos y recursos que te ayudarán a comprender mejor los procesos democráticos y cómo puedes influir en ellos.</p>
+              <button class="si">Ver cursos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="muchacho.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Participa y Cambia</h2>
+              <p>La participación activa es esencial para el cambio social. Únete a nuestros retos y misiones, donde podrás poner en práctica lo que aprendes y hacer una diferencia en tu comunidad.</p>
+              <button class="si">Únete a un reto</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="actua.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Infórmate y Actúa</h2>
+              <p>Mantente al día con las noticias y análisis sobre democracia y corrupción. Nuestros boletines informativos y podcasts te brindarán la información necesaria para que estés siempre informado y listo para actuar.</p>
+              <a href="noticias.html"><button class="si">Leer</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section class="full-width-section" data-aos="fade-up">
+    <div class="image-container">
+      <img src="pruebAAAAAA.jpg" alt="Imagen de fondo">
+      <div class="text-content">
+        <h2>Únete a nuestra comunidad</h2>
+        <p>Regístrate en CODEM para acceder a contenido exclusivo, participar en cursos y ser parte de una red de ciudadanos comprometidos con el cambio. Inicia sesión para continuar tu viaje con nosotros.</p>
+        <div class="buttons">
+         <a href="login.html"> <button class="btn btn-primary">Iniciar sesion</button></a>
+          <a href="register.html"><button class="btn btn-secondary">Registrarse</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h1>Descubre más de CODEM</h1>
+    <p class="section-description">
+        Explora las diversas secciones de nuestro sitio para encontrar recursos que te inspiren y te motiven a participar activamente en la vida cívica.
+    </p>
+
+    <!-- Filas con imágenes y texto -->
+    <div class="row" data-aos="fade-up">
+      <div class="col-md-6 image-container">
+        <img src="abarzo.jpg" alt="Imagen 1">
+      </div>
+      <div class="col-md-6 text-container">
+        <h2>Noticias</h2>
+        <p>Consulta las últimas noticias extraídas de fuentes confiables sobre democracia y participación cívica a nivel mundial. Mantente informado con actualizaciones en tiempo real.</p>
+      </div>
+    </div>
+
+    <div class="row reverse" data-aos="fade-up">
+      <div class="col-md-6 text-container">
+        <h2>Podcasts</h2>
+        <p>Escucha nuestros podcasts donde expertos discuten temas relevantes sobre la democracia, la corrupción y la participación ciudadana. Aprende mientras te desplazas o realizas otras actividades.</p>
+      </div>
+      <div class="col-md-6 image-container">
+        <img src="grupo.jpg" alt="Imagen 2">
+      </div>
+    </div>
+
+    <div class="row" data-aos="fade-up">
+      <div class="col-md-6 image-container">
+        <img src="abarzo.jpg" alt="Imagen 3">
+      </div>
+      <div class="col-md-6 text-container">
+        <h2>Cómics e infografías</h2>
+        <p>Explora temas de democracia y participación ciudadana de forma visual e interactiva. A través de cómics y infografías, simplificamos conceptos complejos para hacerlos accesibles y atractivos, fomentando el aprendizaje de manera dinámica y entretenida.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" data-aos="fade-up">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="Captura de pantalla 2025-02-28 133102.png" alt="Logo CODEM" class="footer-logo">
+                <p class="footer-contact">
+                    <strong>Contacta con nosotros:</strong><br>
+                    <a href="mailto:contacto@codem.com">CODEM.pa@gmail.com</a><br>
+                    <a href="tel:+123456789">+507 66612570</a>
+                </p>
+            </div>
+            
+            <div class="col-md-4">
+                <h5>Síguenos</h5>
+                <div class="social-icons">
+                    <a href="https://x.com/codem_pa?s=09" target="_blank" class="social-icon">
+                        <img src="twitter-x-icon-logo-116902890413xbfexhf8l.webp" alt="x">
+                    </a>
+                    <a href="https://www.instagram.com/codem.pa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon">
+                        <img src="792-7927620_instagram-vector-png.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@codem_pa?is_from_webapp=1&sender_device=pc" target="_blank" class="social-icon">
+                        <img src="tiktok-logo-png-download-116616376145yvg1mox2s.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Enlaces útiles</h5>
+                <ul class="footer-links">
+                    <li><a href="">Sobre nosotros</a></li>
+                    <li><a href="Términos y Condiciones.docx">Términos y condiciones</a></li>
+                    <li><a href="Políticas de privacidad.docx">Política de privacidad</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>&copy; 2025 CODEM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <div class="mascota" id="mascota" data-aos="fade-up">
+    <img src="coditoo.png" alt="Codito" class="mascota-imagen">
+    <div id="mensaje" class="mensaje"></div>
+  </div>
+
+  <!-- Asegúrate de que estos elementos existan en tu HTML -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Inicializar AOS
+    AOS.init();
+  </script>
+  <!-- Cargar el archivo JavaScript -->
+  <script src="script1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+body {
+    background-color: black;
+}
+
+/* Estilos generales */
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px; /* Aumento el espacio entre las tarjetas */
+    justify-content: center;
+    margin-top: 30px; /* Añadí un margen superior para dar espacio desde el inicio */
+}
+
+.card {
+    width: 24rem; /* Aumento el tamaño de las tarjetas */
+    margin-bottom: 50px; /* Más espacio entre las filas de tarjetas */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más grande */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out; /* Animación suave al hacer hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón por encima */
+}
+
+.card-body {
+    flex-grow: 1;
+    padding: 20px; /* Espaciado interno para la descripción */
+}
+
+.card-title {
+    color: black;
+    font-size: 1.3rem; /* Título más grande */
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem; /* Descripción más grande */
+    color: burlywood;
+    margin-bottom: 20px; /* Más espacio antes del botón */
+}
+
+/* Imagen de la tarjeta con borde redondeado */
+.card-img-top {
+    border-radius: 12px 12px 0 0;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio de la imagen */
+    height: 200px; /* Imagen más grande */
+}
+
+/* Estilo general para la sección de los videos */
+.container {
+    max-width: 1200px; /* Limita el ancho de la sección */
+    margin: 0 auto; /* Centra la sección */
+}
+
+/* Estilo del botón */
+.btn {
+    padding: 10px 20px; /* Botón más grande */
+    font-size: 1rem;
+    background-color: burlywood;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: none; /* Elimina bordes */
+    outline: none; /* Evita el borde azul en algunos navegadores */
+}
+
+.btn:hover {
+    background-color: #a47551; /* Color más oscuro al pasar el ratón */
+}
+
+.btn:focus {
+    outline: none; /* Elimina el contorno azul */
+    box-shadow: none; /* Elimina el efecto de sombreado al hacer clic */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+    }
+}
+
+.my-4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 415px;
+}
+
+/* Estilo para la mascota en la esquina */
+.mascota {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: pointer; /* Hace que sea clickeable */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo de la imagen de la mascota */
+.mascota-imagen {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #0b7588; /* Borde verde para que resalte */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out; /* Efecto al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse sobre Codito */
+.mascota:hover .mascota-imagen {
+    transform: scale(1.1); /* Hace que Codito se haga un poco más grande */
+}
+
+/* Estilo del globo de texto */
+.mensaje {
+    background-color: #0b7588; /* Verde de bienvenida */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    max-width: 250px;
+    margin-left: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transform: translateY(10px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    font-family: 'Arial', sans-serif; /* Fuentes más legibles */
+    text-align: center; /* Centrar texto */
+}
+
+/* Efecto de aparición del mensaje */
+.mensaje.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: entradaMensaje 1s ease-in-out;
+}
+
+/* Definir los valores iniciales de la animación para desaparecer */
+.mensaje {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.navbar {
+    background-color: #222 !important; /* Color de fondo */
+    padding: 20px 25px; /* Aumenta el espacio dentro de la barra */
+    font-size: 1.3rem; /* Hace que los textos sean más grandes */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 80px;  /* Aumenta el tamaño del logo */
+    height: auto;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 15px; /* Aumenta el área de clic de los enlaces */
+    color: bisque !important;
+}
+
+/* Estilo para los submenús */
+.navbar-nav .nav-item .dropdown-menu {
+    background-color: black !important; /* Fondo negro */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: bisque;
+    width: auto; /* Ajusta el ancho del submenú */
+    min-width: 200px; /* Asegura que los submenús tengan un tamaño mínimo */
+    position: absolute; /* Asegura que el submenú no se desborde */
+    right: 0; /* Posiciona el submenú a la derecha */
+    left: auto; /* Previene que se mueva a la izquierda */
+}
+
+.navbar-nav .nav-item .dropdown-item {
+    padding: 10px 15px;
+    color: bisque !important;
+    background-color: black !important;
+}
+
+.navbar-nav .nav-item .dropdown-item:hover {
+    background-color: #a47551 !important;
+    color: white !important;
+}
+
+.navbar-nav .nav-item .dropdown-toggle::after {
+    color: bisque; /* Cambia el color del icono del desplegable */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+    }
+
+    /* Asegura que el submenú se alinee correctamente en pantallas pequeñas */
+    .navbar-nav .nav-item .dropdown-menu {
+        position: static; /* Cambia a estático para dispositivos pequeños */
+        margin-top: 10px; /* Añade espacio superior */
+    }
+}
+
+.mini{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 0;
+    
+}
+
+/* Logo */
+.footer-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contacto */
+.footer-contact {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Redes sociales */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.social-icon img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Enlaces útiles */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-links h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .footer-logo {
+        width: 150px;
+    }
+
+    .footer-contact {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        padding: 0 20px;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 130px;
+    }
+
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-links {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .footer-contact {
+        font-size: 0.8rem;
+    }
+
+    .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}
